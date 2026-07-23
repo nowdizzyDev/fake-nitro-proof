@@ -117,7 +117,6 @@ fake-nitro-proof/
 
 ## 📝 Notlar
 
-- `config.json` gizli tutulur, GitHub'a pushlanmaz
 - Bot sadece `ownerId`'de tanımlı kullanıcı tarafından kullanılabilir
 - Chrome ilk kurulumda otomatik indirilir
 
