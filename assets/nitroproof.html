@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: #313338;
+    font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 720px;
+    padding: 12px 16px;
+  }
+
+  .message { display: flex; align-items: flex-start; gap: 14px; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; object-fit: cover; }
+  .msg-body { flex: 1; min-width: 0; }
+  .msg-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px; }
+  .username { color: #ffffff; font-size: 15px; font-weight: 500; }
+  .timestamp { color: #87898c; font-size: 11.5px; }
+  .msg-text { color: #dbdee1; font-size: 15px; line-height: 1.4; }
+  .spoiler { background-color: #2b2d31; color: #2b2d31; border-radius: 3px; padding: 0 3px; }
+  .spoiler-link { color: #00aff4; text-decoration: none; }
+
+  .gift-card {
+    display: flex;
+    margin-top: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 653px;
+    height: 169px;
+    border: 1px solid #3a3b3e;
+  }
+
+  .gift-left {
+    width: 353px;
+    flex-shrink: 0;
+    background-color: #1e1f22;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .gift-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f2f3f5;
+    margin-bottom: 5px;
+    white-space: nowrap;
+  }
+
+  .gift-desc {
+    color: #b5bac1;
+    font-size: 13.5px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .gift-desc .sender { color: #f2f3f5; font-weight: 600; }
+  .gift-desc .nitro-word { color: #b5bac1; }
+  .gift-desc .duration { color: #f2f3f5; font-weight: 700; }
+
+  .gift-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .accept-btn {
+    background-color: #5865f2;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 16px;
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .expires {
+    color: #87898c;
+    font-size: 12px;
+  }
+
+  /* Sağ kısım - 220px */
+  .gift-right {
+    width: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .gift-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .date-divider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .date-divider::before, .date-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #3f4147;
+  }
+  .date-divider span {
+    color: #87898c;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .second-msg { margin-top: 10px; }
+</style>
+</head>
+<body>
+
+  <div class="date-divider"><span>FULL_DATE</span></div>
+
+  <div class="message">
+    <img src="GIFTER_AVATAR_URL" class="avatar" alt="" onerror="this.src='https://cdn.discordapp.com/embed/avatars/0.png'">
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="username">GIFTER_USERNAME</span>
+        <span class="timestamp">Today at TIMESTAMP_1</span>
+      </div>
+      <div class="msg-text">GIFTER_MESSAGE<span class="spoiler">https://discord.gift/KJASNZXCJD</span></div>
+
+      <div class="gift-card">
+        <div class="gift-left">
+          <div>
+            <div class="gift-title">You've been gifted a subscription!</div>
+            <div class="gift-desc">
+              <span class="sender">GIFTER_USERNAME</span> has gifted you <span class="nitro-word">Nitro</span> for <span class="duration">NITRO_DURATION</span>!
+            </div>
+          </div>
+          <div class="gift-footer">
+            <button class="accept-btn">Accept</button>
+            <span class="expires">Expires in EXPIRES_HOURS hours</span>
+          </div>
+        </div>
+        <div class="gift-right">
+          <img src="./nitro_banner_cropped_2.png" alt="nitro">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="message second-msg">
+    <img src="RECEIVER_AVATAR_URL" class="avatar" alt="" onerror="this.src='https://cdn.discordapp.com/embed/avatars/1.png'">
+    <div class="msg-body">
+      <div class="msg-header">
+        <span class="username">RECEIVER_USERNAME</span>
+        <span class="timestamp">Today at TIMESTAMP_2</span>
+      </div>
+      <div class="msg-text">RECEIVER_MESSAGE</div>
+    </div>
+  </div>
+
+</body>
+</html>
