@@ -7,7 +7,6 @@ Discord üzerinde gerçekçi Nitro hediye ekran görüntüsü oluşturan bir bot
 ## ✨ Özellikler
 
 - `/proof` komutu ile modal açılır
-- İki kullanıcının ID'si, mesajları ve nitro türü girilir
 - Puppeteer ile gerçekçi Discord arayüzü render edilir
 - Screenshot alınarak Component v2 ile gönderilir
 - Sadece bot sahibi kullanabilir (`ownerId`)
